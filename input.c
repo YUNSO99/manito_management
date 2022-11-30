@@ -1,8 +1,15 @@
 #include <stdio.h>
 
+#include "Manito.h"
+
+int IsAvailNum(int num)//유효한 번호인지 판별
+{
+    return (num >= 1) && (num <= people_num);
+}
+
 void Input(){
     printf("짜잔~~ 당신만의 시크릿산타! 마니또를 시작하려면 입력을 해주셔야겠죠?\n
-            입력은 {입력: 홍길동} <- 와 같이 성함을 적어주시는 거랍니다??\n");
+            입력은 번호를 먼저 적어주시고, {이름: 홍길동} <- 와 같이 성함을 적어주시는 거랍니다??\n");
     for (int i=0;)
     scanf("%d")
 

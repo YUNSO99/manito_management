@@ -3,11 +3,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_NLEN    20 //최대 이름 길이
-#define MAX_SUBJECT 3 //과목 수
+#include "Manito.h"
 
+#define MAX_NLEN    20 //최대 이름 길이
 struct Manito{//구조체 정의
     char name[MAX_NLEN + 1];//이름
+    int num; //번호
+    char manito_name[MAX_NLEN + 1];//마니또 이름
 };
 
 Manito *mani;
@@ -64,6 +66,7 @@ int SelectMenu(){
     scanf("%d", &key);
     return key;
 }
+
 
 
 
