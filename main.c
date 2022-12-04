@@ -3,21 +3,23 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "Manito.h"
+#include "main.h"
 
-#define MAX_NLEN    20 //최대 이름 길이
-struct Manito{//구조체 정의
-    char name[MAX_NLEN + 1];//이름
+/*#define MAX_NLEN    20 //최대 이름 길이
+typedef struct{//구조체 정의
+char name[MAX_NLEN + 1];//이름
     int num; //번호
     char manito_name[MAX_NLEN + 1];//마니또 이름
-};
+}Manito;
 
 Manito *mani;
 int people_num;
-
+*/
 
 void Initialize(); //초기화
 void Run();
+int SelectMenu();//메뉴 출력 및 선택
+
 int main(void){
 
     Initialize();
@@ -35,12 +37,6 @@ void Initialize()
     mani = (Manito *)malloc(sizeof(Manito)*people_num);//동적 배열 메모리 할당
     memset(mani, 0, sizeof(Manito)*people_num);//메모리 초기화
 }
-
-int SelectMenu();//메뉴 출력 및 선택
-void Input();
-void Search();
-void Match();
-void Output();
 
 void Run()
 {
