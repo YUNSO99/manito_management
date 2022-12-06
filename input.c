@@ -14,8 +14,8 @@ void Input(){
     Manito *man = 0;
     int s = 0;
 
-    printf("추가할 학생 번호(1~%d): ", people_num);
-    scanf_s("%d", &num);
+    printf("추가할 번호(1~%d): ", people_num);
+    scanf("%d", &num);
 
     if (IsAvailNum(num) == 0)//유효한 번호가 아닐 때
     {
@@ -34,6 +34,5 @@ void Input(){
     man = mani + (num - 1);
     man->num = num;
     printf("이름: ");
-    scanf_s("%s", man->name, sizeof(man->name));
-    return 0;
+    scanf("%s", man->name);
 };

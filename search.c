@@ -19,7 +19,7 @@ void Search(){
     int s = 0;
 
     printf("검색할 사람의 번호(1~%d): ", people_num);
-    scanf_s("%d", &num);
+    scanf("%d", &num);
 
     if (((num >= 1) && (num <= people_num)) == 0)//유효한 번호가 아닐 때
     {

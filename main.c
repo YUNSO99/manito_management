@@ -33,7 +33,7 @@ void Initialize()
     int s = 0;
 
     printf("두구두구 마니또를 시작할 건데요!! 잠깐!!!!! 몇 명이서 진행하시죠?!\n");
-    scanf_s("%d", &people_num);
+    scanf("%d", &people_num);
     mani = (Manito *)malloc(sizeof(Manito)*people_num);//동적 배열 메모리 할당
     memset(mani, 0, sizeof(Manito)*people_num);//메모리 초기화
 }
