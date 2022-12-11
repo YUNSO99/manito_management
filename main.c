@@ -2,19 +2,10 @@
 #include <memory.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 #include "main.h"
 
-/*#define MAX_NLEN    20 //최대 이름 길이
-typedef struct{//구조체 정의
-char name[MAX_NLEN + 1];//이름
-    int num; //번호
-    char manito_name[MAX_NLEN + 1];//마니또 이름
-}Manito;
-
-Manito *mani;
-int people_num;
-*/
 
 void Initialize(); //초기화
 void Run();

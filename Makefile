@@ -1,15 +1,20 @@
-app.out: main.o foo.o bar.o
-    gcc -o app.out main.o foo.o bar.o
+program: main.o input.o output.o guess.o main.o search.o
+    gcc input.o output.o guess.o main.o search.o -o program
  
-main.o: foo.h bar.h main.c
-    gcc -c -o main.o main.c
+main.o: main.c
+    gcc -c main.c
  
-foo.o: foo.h foo.c
-    gcc -c -o foo.o foo.c
- 
-bar.o: bar.h bar.c
-    gcc -c -o bar.o bar.c
+input.o: input.c
+    gcc -c input.c
 
+output.o: output.c
+    gcc -c output.c
+
+guess.o: guess.c
+    gcc -c guess.c
+
+search.o: search.c
+    gcc -c search.c
 
 CC=<컴파일러>
 CFLAGS=<컴파일 옵션>

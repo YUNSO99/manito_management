@@ -19,7 +19,7 @@ void Input(){
 
     if (IsAvailNum(num) == 0)//유효한 번호가 아닐 때
     {
-        printf("어라~???!! 범위를 벗어났어요!!!!\n");
+        printf("어라~?! 범위를 벗어났어요!!!!\n");
         return;
     }
 
