@@ -28,5 +28,6 @@ void Search(){
     }
 
     man = mani + (num - 1);
+    printf("%4s %10s %10s\n", "번호", "이름", "마니또");
     ViewData(man);
 }
