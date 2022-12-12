@@ -11,8 +11,11 @@ void Run();
 int SelectMenu();//메뉴 출력 및 선택
 
 void main(void){
-    FILE* fp = NULL;
+    FILE* fp;
     fp = fopen("manito.txt", "w+");
+    if(fp==NULL){
+        printf("fialed");
+    }
     Initialize();
     Run();
     Manito * list_head = NULL;
@@ -28,6 +31,7 @@ void Initialize()
 {
     int i = 0;
     int s = 0;
+    Manito *man = 0;
 
     printf("두구두구 마니또를 시작할 건데요!! 잠깐!!!!! 몇 명이서 진행하시죠?!\n");
     scanf("%d", &people_num);
@@ -37,18 +41,31 @@ void Initialize()
 
     srand(time(NULL)); 
     int arr[people_num];
+    int arr2[people_num];
     int temp;
     int rn;
     for (int i=0; i < people_num; i++){
         arr[i] = i;
+        arr2[i] = i;
     }
-    for (int i=0; i < people_num; i++)
-    {
-        rn = rand() % (people_num - i) + i;    // i 부터 people_num-1 사이에 임의의 정수 생성
-        temp = arr[i];
-        arr[i] = arr[rn];
-        arr[rn] = temp;
+    for (int i=0; i < people_num; i++){
+        if(arr[i]==arr2[i]){
+            for (int i=0; i < people_num; i++){
+                rn = rand() % (people_num - i) + i;    // i 부터 people_num-1 사이에 임의의 정수 생성
+                temp = arr2[i];
+                arr2[i] = arr2[rn];
+                arr2[rn] = temp;
     }
+        }
+        else break;
+    }
+    
+    for (int i=0; i < people_num; i++){
+        man = mani + i;
+        man->manito_name = arr2[i]+1;
+    }
+    
+    
 }
 
 void Run()

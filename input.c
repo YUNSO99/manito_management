@@ -37,7 +37,6 @@ void Input(){
     printf("이름: ");
     scanf("%s", man->name);
     //fprintf(fp, "%d %s\n", num, name);
-    new_manito(arr);
     return;
 };
 
