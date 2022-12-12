@@ -2,7 +2,7 @@
 #include <memory.h>
 #include <stdlib.h>
 #include <string.h>
-
+#include <time.h>
 #define MAX_NLEN    20 //최대 이름 길이
 
 void Initialize(); //초기화
@@ -17,7 +17,9 @@ typedef struct{//구조체 정의
 
 char name[20];
 Manito *mani;
+Manito* tmp_node;
 int people_num;
+
 
 int SelectMenu();//메뉴 출력 및 선택
 void Input();
