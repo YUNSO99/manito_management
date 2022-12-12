@@ -71,13 +71,16 @@ void Initialize()
 void Run()
 {
     int key = 0;
+    void(*input)(); input = Input;
+    void(*output)(); output = Output;
+    void(*search)(); search = Search;
     while ((key = SelectMenu()) != 0)//선택한 메뉴가 0이 아니면 반복
     {
         switch (key)//선택한 키에 따라 기능 수행
         {
-        case 1: Input(); break;
-        case 2: Search(); break;
-        case 3: Output(); break;
+        case 1: input(); break;
+        case 2: search(); break;
+        case 3: output(); break;
         default: printf("삐빅-- 틀렸습니다. 다시 하셔야겠는디요?\n"); break;
         }
     }

@@ -3,7 +3,7 @@
 void ViewData(Manito *man)
 {
 
-    printf("%4d %10s %4d", man->num, man->name, man->manito_name);
+    printf("%4d %10s %6d", man->num, man->name, man->manito_name);
     printf("\n");
 }
 

@@ -12,7 +12,9 @@ void Input(){
 
     int num = 0;
     Manito *man = 0;
+    Manito *tmp_node = NULL;
     int s = 0;
+    
     
 
     printf("추가할 번호(1~%d): ", people_num);
@@ -30,12 +32,16 @@ void Input(){
         return;
     }
 
-    //mani에는 1번 학생 데이터를 관리하는 메모리 주소
-    //따라서 mani+(num-1)은 num번 학생 데이터를 관리하는 메모리 주소
+    //mani에는 1번 데이터를 관리하는 메모리 주소
+    //따라서 mani+(num-1)은 num번 데이터를 관리하는 메모리 주소
     man = mani + (num - 1);
     man->num = num;
+    man->next = tmp_node;
+    tmp_node = man;
+    
     printf("이름: ");
     scanf("%s", man->name);
+
     //fprintf(fp, "%d %s\n", num, name);
     return;
 };
