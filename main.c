@@ -11,20 +11,8 @@ void Run();
 int SelectMenu();//메뉴 출력 및 선택
 
 void main(void){
-    FILE* fp;
-    fp = fopen("manito.txt", "w+");
-    if(fp==NULL){
-        printf("fialed");
-    }
     Initialize();
     Run();
-    Manito * list_head = NULL;
-    while(list_head){
-        tmp_node = list_head;
-        list_head = list_head->next;
-        free(tmp_node);
-    }
-    fclose(fp);
 }
 
 void Initialize()
